@@ -1,5 +1,8 @@
-FROM devlikeapro/waha-plus:latest
+FROM devlikeapro/waha:latest
 
-ENV WHATSAPP_RESTART_ALL_SESSIONS=true
-ENV WAHA_PRINT_QR=true
-ENV WAHA_LOG_LEVEL=info
+EXPOSE 3000
+
+ENV WAHA_PORT=$PORT
+ENV WAHA_HOSTNAME=0.0.0.0
+
+CMD ["npm", "start"]
