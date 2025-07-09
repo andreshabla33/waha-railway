@@ -1,8 +1,6 @@
 FROM devlikeapro/waha-plus:latest
 
+# Exponer el puerto
 EXPOSE 3000
 
-ENV WAHA_PORT=$PORT
-ENV WAHA_HOSTNAME=0.0.0.0
-
-CMD ["npm", "start"]
+# El comando de inicio ya está definido en la imagen base
