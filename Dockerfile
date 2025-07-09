@@ -1,13 +1,13 @@
-FROM devlikeapro/waha:latest
+# Necesitamos un build stage para autenticarnos
+FROM alpine AS auth
+ARG DOCKER_USERNAME
+ARG DOCKER_PASSWORD
+RUN apk add --no-cache docker-cli
+RUN echo ${DOCKER_PASSWORD} | docker login -u ${DOCKER_USERNAME} --password-stdin
+
+# Ahora pull la imagen
+FROM devlikeapro/waha-plus:latest
 
 # Variables de entorno
-ENV NODE_ENV=production
-ENV PORT=3000
-ENV WAHA_PORT=3000
-ENV WAHA_HOSTNAME=0.0.0.0
-
-# Exponer puerto
-EXPOSE 3000
-
-# Comando correcto para producción
-CMD ["npm", "run", "start:prod"]
+ENV DOCKER_USERNAME=${DOCKER_USERNAME}
+ENV DOCKER_PASSWORD=${DOCKER_PASSWORD}
