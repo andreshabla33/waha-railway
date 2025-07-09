@@ -1,4 +1,4 @@
-FROM devlikeapro/waha:latest
+FROM devlikeapro/waha-plus
 
 # Variables de entorno
 ENV NODE_ENV=production
