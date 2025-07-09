@@ -1,6 +1,6 @@
-# Usa la imagen pública de WAHA Core como base
-FROM devlikeapro/waha:latest
+FROM devlikeapro/waha-plus:latest
 
-# Agrega una variable para identificar que es "Plus"
-ENV WAHA_VERSION=plus
+# Variables de entorno necesarias
 ENV WHATSAPP_RESTART_ALL_SESSIONS=true
+ENV WAHA_PRINT_QR=true
+ENV WAHA_LOG_LEVEL=info
