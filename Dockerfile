@@ -1,4 +1,4 @@
-FROM devlikeapro/waha-plus:latest
+FROM devlikeapro/waha:latest
 
 # Variables de entorno necesarias
 ENV WHATSAPP_RESTART_ALL_SESSIONS=true
