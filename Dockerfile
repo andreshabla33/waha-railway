@@ -1,6 +1,5 @@
-FROM devlikeapro/waha:latest
+FROM devlikeapro/waha-plus:latest
 
-# Variables de entorno necesarias
 ENV WHATSAPP_RESTART_ALL_SESSIONS=true
 ENV WAHA_PRINT_QR=true
 ENV WAHA_LOG_LEVEL=info
