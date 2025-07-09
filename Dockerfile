@@ -1,3 +1,4 @@
+# Usar Chrome específicamente
 FROM devlikeapro/waha-plus:chrome
 
 EXPOSE 3000
